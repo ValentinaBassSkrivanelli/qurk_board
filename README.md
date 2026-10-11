@@ -1,53 +1,75 @@
-## Team Members:
+# Qurk Board
+
+## Team Members
+
 1. Valentina Bass
 2. Marvin Canastuj
 3. Thomas Barney
 4. Charles Adam Davis
 
+## Project Description
 
-# Description:
-A simple and helpful organization tool for your everyday needs! It is a simple tool!
+Qurk Board is a visual organization and planning tool that helps users collect ideas, manage notes, and visualize connections between related information. Users can create, edit, search, pin, move, and connect notes in an interactive workspace.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+The application includes user registration, authentication, protected pages, and a profile where users can view their account information and update their username.
+
+## Tech Stack
+
+- Next.js App Router
+- React and TypeScript
+- Auth.js v5 for authentication
+- MongoDB for user and profile data
+- Tailwind CSS for styling
+- Vercel for deployment
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js
+- npm
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Deployment
 
-## Authentication and deployment
+The application is deployed on Vercel.
 
-Copy `.env.example` to `.env.local` and set `MONGODB_DB_URI` to a MongoDB connection string and `MONGODB_DB_NAME` to the database name. The database account must be allowed to connect from the deployment environment.
+**Live Application:** https://qurk-board.vercel.app/
 
-For Vercel, set both variables in the project's Environment Variables settings for every environment you deploy (Preview and Production). Keep the Vercel Root Directory set to this app's repository root. The production build can be checked with `npm run build`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Authentication and Access
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-## GitHub project Board: [https://github.com/users/ThomasVanDoof/projects/1]
+The application uses Auth.js v5. Users can register, sign in, access protected pages, view their profile, and update their username.
 
-## Learn More
+TEST LOG IN:
+Email: test@app.com
+Password: testing123
 
-To learn more about Next.js, take a look at the following resources:
+## Main Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- User registration and authentication
+- Protected Board and Profile pages
+- Profile information retrieved from MongoDB
+- Username updates persisted to MongoDB
+- Interactive note creation, editing, deletion, pinning, searching, and movement
+- Connections between notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## API Notes
 
-## Deploy on Vercel
+- `GET /api/profile`: retrieves the authenticated user's profile.
+- `PATCH /api/profile`: validates and updates the authenticated user's username.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The profile API uses the authenticated session and MongoDB to retrieve and update user data.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Known Issues and Future Improvements
+
+- Add database-backed note and connection operations.
+
+## GitHub Project Board
+
+[Qurk Board Project Board](https://github.com/users/ThomasVanDoof/projects/1)
+
+## Useful Resources
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Next.js Learn](https://nextjs.org/learn)
+- [Next.js Deployment Documentation](https://nextjs.org/docs/app/building-your-application/deploying)
