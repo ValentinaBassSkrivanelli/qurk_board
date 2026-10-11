@@ -40,7 +40,7 @@ The application is deployed on Vercel.
 
 The application uses Auth.js v5. Users can register, sign in, access protected pages, view their profile, and update their username.
 
-TEST LOG IN:
+### TEST LOGIN:
 Email: test@app.com
 Password: testing123
 
